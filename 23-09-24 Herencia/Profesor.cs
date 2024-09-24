@@ -17,16 +17,15 @@ namespace _23_09_24_Herencia
         }
 
         public Profesor(int pId, string pNombre, string pApellido, string pMateria)
+            :base(pId, pNombre, pApellido) 
         {
-            this.Id = pId;
-            this.Nombre = pNombre;
-            this.Apellido = pApellido;
             this.Materia = pMateria;
         }
 
-        public void MostrarDatos()
+        public override void MostrarDatos()
         {
-            Console.WriteLine($"Id: {this.Id} - Nombre: {this.Nombre} - Apellido: {this.Apellido} - Materia: {this.Materia}");
+            base.MostrarDatos();
+            Console.WriteLine($" Materia: {this.Materia}");
         }
     }
 }

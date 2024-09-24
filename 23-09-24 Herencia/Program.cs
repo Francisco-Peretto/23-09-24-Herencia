@@ -20,29 +20,15 @@ namespace _23_09_24_Herencia
             listaProfesores = new List<Profesor>();
             listaPersonales = new List<Personal>();
 
-            /*
-            Personal _Personal = new Personal();
-            _Personal.Id = 1;
-            _Personal.Nombre = "Pepe";
-            _Personal.Apellido = "Quer";
-
-            Profesor _profesor = new Profesor(1, "Diego", "Mendoza", "Programación II");
-
-            Console.WriteLine("Clase Profesor");
-            Console.WriteLine("ID: {0}, Nombre: {1}, Apellido: {2}, Materia {3}", _profesor.Id, _profesor.Nombre, _profesor.Apellido, _profesor.Materia);
-
-            Console.WriteLine("\nClase Personal");
-            Console.WriteLine("ID: {0}, Nombre: {1}, Apellido: {2}", _Personal.Id, _Personal.Nombre, _Personal.Apellido);
-            */
-
             do
             {
+                Console.Clear();
                 Console.Write("Ingrese 1 para cargar un profesor, 2 para cargar un personal, 3 para salir: ");
                 opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
                 {
-                    case 0: // Profesor
+                    case 1: // Profesor
                         Console.Write("ID: ");
                         id = int.Parse(Console.ReadLine());
                         Console.Write("Nombre: ");
@@ -53,9 +39,11 @@ namespace _23_09_24_Herencia
                         materia = (Console.ReadLine());
                         Profesor profesor = new Profesor(id, nombre, apellido, materia);
                         listaProfesores.Add(profesor);
+                        Console.WriteLine("\nProfesor guardado.");
+                        Console.WriteLine("\nPresione una tecla para continuar.");
                         break;
 
-                    case 1:
+                    case 2: // Personal
                         Console.Write("ID: ");
                         id = int.Parse(Console.ReadLine());
                         Console.Write("Nombre: ");
@@ -64,19 +52,37 @@ namespace _23_09_24_Herencia
                         apellido = (Console.ReadLine());
                         Personal personal = new Personal(id, nombre, apellido);
                         listaPersonales.Add(personal);
+                        Console.WriteLine("\nPersonal guardado.");
+                        Console.WriteLine("\nPresione una tecla para continuar.");
                         break;
-                    case 2:
-                        Console.WriteLine("Saliendo");
-                        
+                    case 3:
+                        if (listaPersonales.Count > 0)
+                        {
+                            Console.WriteLine("\nLista del personal.");
+                            foreach (Personal personal1 in listaPersonales)
+                            {
+                                personal1.MostrarDatos();
+                            }
+                        }    
+
+                        if (listaProfesores.Count > 0)
+                        {
+                            Console.WriteLine("\n\nLista de profesores.");
+                            foreach (Personal profesor1 in listaProfesores)
+                            {
+                                profesor1.MostrarDatos();
+                            }
+                        }
+
+                        Console.WriteLine("\nSaliendo. Presione una tecla para continuar.");
                         salir = true;
                         break;
 
                     default:
-                        Console.WriteLine("Error");
+                        Console.WriteLine("Error.");
                         break;
                 }
                 Console.ReadKey();
-
             }
             while (!salir);
         }

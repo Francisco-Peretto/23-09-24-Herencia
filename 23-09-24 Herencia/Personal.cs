@@ -37,5 +37,9 @@ namespace _23_09_24_Herencia
             set { this._Apellido = value; }
         }
 
+        public virtual void MostrarDatos()
+        {
+            Console.Write($"Id: {this.Id} - Nombre: {this.Nombre} - Apellido: {this.Apellido}");
+        }
     }
 }
