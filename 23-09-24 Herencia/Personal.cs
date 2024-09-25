@@ -19,23 +19,11 @@ namespace _23_09_24_Herencia
             this.Apellido = pApellido;
         }
 
-        public int Id
-        {
-            get { return this._Id; }
-            set { this._Id = value; }
-        }
+        public int Id { get { return this._Id; } set { this._Id = value; } }
 
-        public string Nombre
-        {
-            get { return this._Nombre; }
-            set { this._Nombre = value; }
-        }
+        public string Nombre {  get { return this._Nombre; } set { this._Nombre = value; } }
 
-        public string Apellido
-        {
-            get { return this._Apellido; }
-            set { this._Apellido = value; }
-        }
+        public string Apellido { get { return this._Apellido; } set { this._Apellido = value; } }
 
         public virtual void MostrarDatos()
         {

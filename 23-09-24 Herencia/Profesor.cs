@@ -10,14 +10,9 @@ namespace _23_09_24_Herencia
     {
         private string _Materia;
 
-        public string Materia
-        {
-            get { return this._Materia; }
-            set { this._Materia = value; }
-        }
+        public string Materia { get { return this._Materia; } set { this._Materia = value; } }
 
-        public Profesor(int pId, string pNombre, string pApellido, string pMateria)
-            :base(pId, pNombre, pApellido) 
+        public Profesor(int pId, string pNombre, string pApellido, string pMateria) : base(pId, pNombre, pApellido) 
         {
             this.Materia = pMateria;
         }

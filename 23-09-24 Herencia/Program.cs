@@ -23,7 +23,7 @@ namespace _23_09_24_Herencia
             do
             {
                 Console.Clear();
-                Console.Write("Ingrese 1 para cargar un profesor, 2 para cargar un personal, 3 para salir: ");
+                Console.Write("1: cargar un profesor, 2: cargar un personal, 3: salir: ");
                 opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
