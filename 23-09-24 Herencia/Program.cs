@@ -15,10 +15,10 @@ namespace _23_09_24_Herencia
             int id;
             bool salir = false;
             List<Profesor> listaProfesores;
-            List<Personal> listaPersonales;
+            //List<Personal> listaPersonales;
 
             listaProfesores = new List<Profesor>();
-            listaPersonales = new List<Personal>();
+            //listaPersonales = new List<Personal>();
 
             do
             {
@@ -50,20 +50,20 @@ namespace _23_09_24_Herencia
                         nombre = (Console.ReadLine());
                         Console.Write("Apellido: ");
                         apellido = (Console.ReadLine());
-                        Personal personal = new Personal(id, nombre, apellido);
-                        listaPersonales.Add(personal);
+                        //Personal personal = new Personal(id, nombre, apellido);
+                        //listaPersonales.Add(personal);
                         Console.WriteLine("\nPersonal guardado.");
                         Console.WriteLine("\nPresione una tecla para continuar.");
                         break;
                     case 3:
-                        if (listaPersonales.Count > 0)
+                        /*if (listaPersonales.Count > 0)
                         {
                             Console.WriteLine("\nLista del personal.");
                             foreach (Personal personal1 in listaPersonales)
                             {
                                 personal1.MostrarDatos();
                             }
-                        }    
+                        }    */
 
                         if (listaProfesores.Count > 0)
                         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _23_09_24_Herencia
 {
-    internal class Personal
+    internal abstract class Personal
     {
         private int _Id;
         private string _Nombre;
@@ -29,5 +29,7 @@ namespace _23_09_24_Herencia
         {
             Console.Write($"Id: {this.Id} - Nombre: {this.Nombre} - Apellido: {this.Apellido}");
         }
+        // Clases abstractas, las hijas están obligadas a sobreescribir los métodos abstractos
+        public abstract void Mostrar();
     }
 }

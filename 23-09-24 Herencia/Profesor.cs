@@ -22,5 +22,7 @@ namespace _23_09_24_Herencia
             base.MostrarDatos();
             Console.WriteLine($" Materia: {this.Materia}");
         }
+
+        public override void Mostrar() { }
     }
 }
